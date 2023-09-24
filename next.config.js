@@ -15,7 +15,12 @@ const nextConfig = {
           "./auth": "./src/components/Auth.js",
         },
         remotes: {},
-        shared: {},
+        shared: {
+          tailwindcss: {
+            requiredVersion: false,
+            singleton: true,
+          },
+        },
         extraOptions: {
           exposePages: true,
         },
