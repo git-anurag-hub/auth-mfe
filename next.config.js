@@ -6,7 +6,7 @@ const nextConfig = {
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: "home",
+        name: "auth",
         filename: "static/chunks/remoteEntry.js",
         exposes: {
           "./auth": "./src/components/Auth.js",
