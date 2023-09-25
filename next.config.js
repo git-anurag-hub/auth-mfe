@@ -1,8 +1,10 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: "export",
   experimental: {
     esmExternals: false,
   },
@@ -26,6 +28,13 @@ const nextConfig = {
         },
       })
     );
+    // config.plugins.push(
+    //   new MiniCssExtractPlugin({
+    //     filename: "static/css/[name].css",
+    //     chunkFilename: "static/css/[id].css",
+    //     ignoreOrder: false, // Enable to remove warnings about conflicting order
+    //   })
+    // );
     return config;
   },
 };
